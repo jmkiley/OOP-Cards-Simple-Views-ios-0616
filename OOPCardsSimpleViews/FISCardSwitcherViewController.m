@@ -23,30 +23,30 @@
 }
 
 - (IBAction)changeThreeOfSpades:(id)sender {
-    self.topLabel.text = @"♠️3";
-    self.middleLabel.text =  @"♠️3";
-    self.bottomLabel.text = @"♠️3";
+    self.topLabel.text = self.threeOfSpades.cardLabel ;
+    self.middleLabel.text = self.threeOfSpades.cardLabel ;
+    self.bottomLabel.text = self.threeOfSpades.cardLabel ;
     
 }
 
 - (IBAction)changeFourOfClubs:(id)sender {
-    self.topLabel.text = @"♣️4";
-    self.middleLabel.text = @"♣️4";
-    self.bottomLabel.text =  @"♣️4";
+    self.topLabel.text = self.fourOfClubs.cardLabel  ;
+    self.middleLabel.text = self.fourOfClubs.cardLabel;
+    self.bottomLabel.text = self.fourOfClubs.cardLabel;
 }
 
 
 - (IBAction)changeEightOfDiamonds:(id)sender {
-    self.topLabel.text = @"♦️8";
-    self.middleLabel.text = @"♦️8";
-    self.bottomLabel.text =  @"♦️8";
+    self.topLabel.text = self.eightOfDiamonds.cardLabel;
+    self.middleLabel.text = self.eightOfDiamonds.cardLabel;
+    self.bottomLabel.text =  self.eightOfDiamonds.cardLabel;
     
 }
 
 - (IBAction)changeTenOfHearts:(id)sender {
-    self.topLabel.text = @"♥️10";
-    self.middleLabel.text = @"♥️10";
-    self.bottomLabel.text =  @"♥️10";
+    self.topLabel.text = self.tenOfHearts.cardLabel;
+    self.middleLabel.text = self.tenOfHearts.cardLabel;
+    self.bottomLabel.text =  self.tenOfHearts.cardLabel;
 }
 
 
