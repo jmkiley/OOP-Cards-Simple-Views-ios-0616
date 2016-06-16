@@ -4,6 +4,7 @@
 
 @interface FISCardSwitcherViewController ()
 
+@property (strong, nonatomic) NSArray *arrayOfLabels;
 @end
 
 @implementation FISCardSwitcherViewController
@@ -20,33 +21,35 @@
                                                     rank:@"8"];
     self.tenOfHearts = [[FISCard alloc] initWithSuit:@"♥️"
                                                 rank:@"10"];
+    self.arrayOfLabels = @[self.topLabel , self.middleLabel, self.bottomLabel];
 }
 
+// Can I make this a loop?
 - (IBAction)changeThreeOfSpades:(id)sender {
-    self.topLabel.text = self.threeOfSpades.cardLabel ;
-    self.middleLabel.text = self.threeOfSpades.cardLabel ;
-    self.bottomLabel.text = self.threeOfSpades.cardLabel ;
-    
+    for (UILabel *label in self.arrayOfLabels) {
+        label.text = self.threeOfSpades.cardLabel ;
+    }
 }
 
 - (IBAction)changeFourOfClubs:(id)sender {
-    self.topLabel.text = self.fourOfClubs.cardLabel  ;
-    self.middleLabel.text = self.fourOfClubs.cardLabel;
-    self.bottomLabel.text = self.fourOfClubs.cardLabel;
+    
+    for (UILabel *label in self.arrayOfLabels) {
+        label.text = self.fourOfClubs.cardLabel ;
+    }
 }
 
 
 - (IBAction)changeEightOfDiamonds:(id)sender {
-    self.topLabel.text = self.eightOfDiamonds.cardLabel;
-    self.middleLabel.text = self.eightOfDiamonds.cardLabel;
-    self.bottomLabel.text =  self.eightOfDiamonds.cardLabel;
+    for (UILabel *label in self.arrayOfLabels) {
+        label.text = self.eightOfDiamonds.cardLabel ;
+    }
     
 }
 
 - (IBAction)changeTenOfHearts:(id)sender {
-    self.topLabel.text = self.tenOfHearts.cardLabel;
-    self.middleLabel.text = self.tenOfHearts.cardLabel;
-    self.bottomLabel.text =  self.tenOfHearts.cardLabel;
+    for (UILabel *label in self.arrayOfLabels) {
+        label.text = self.tenOfHearts.cardLabel ;
+    }
 }
 
 
